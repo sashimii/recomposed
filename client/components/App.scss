@@ -4,6 +4,23 @@
 $primary-orange: #fa4616;
 
 .app-main {
+  .title {
+    padding: 5rem 0;
+
+    h1 {
+      font-weight: 700;
+      color: $primary-orange;
+      text-transform: uppercase;
+      font-size: 3rem;
+    }
+    p {
+      font-weight: 200;
+      color: #8c8c8c;
+      text-transform: uppercase;
+      font-size: 1rem;
+    }
+  }
+  
   .button {
     background-color: white;
     border-color: $primary-orange;

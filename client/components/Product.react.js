@@ -1,4 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import axios from 'axios';
+
 import './Product.scss';
 
 export default function Product(props) {
@@ -28,3 +31,8 @@ export default function Product(props) {
   );
 
 }
+
+
+Product.propTypes = {
+  data: PropTypes.object.isRequired
+};

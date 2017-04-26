@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+
 import Product from './Product.react';
 
 export default function ProductList(props) {
@@ -16,3 +18,8 @@ export default function ProductList(props) {
       </div>
     );
 }
+
+ProductList.propTypes = {
+  results: PropTypes.object.isRequired,
+  loadLimit: PropTypes.number.isRequired
+};
