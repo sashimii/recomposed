@@ -1,0 +1,17 @@
+@import '../../node_modules/foundation-sites/scss/foundation';
+@include foundation-everything($flex: true);
+
+$primary-orange: #fa4616;
+
+.app-main {
+  .button {
+    background-color: white;
+    border-color: $primary-orange;
+    color: $primary-orange;
+    text-transform: uppercase;
+    &:hover {
+      color: white;
+      background-color: $primary-orange;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+
+$color-new: #fa4616;
+$color-sale: #27c97f;
+$color-clearance: #1b9ee7;
+
+.product-item {
+  .card {
+    border: none;
+    margin-bottom: 4rem;
+  }
+  .card-section {
+    text-align: center;
+
+    h4 {
+      font-weight: 200;
+      color: #8c8c8c;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+    }
+
+    .price-information {
+      color: #ababab;
+      line-height: 0;
+      .dollar-sign {
+        font-weight: 500;
+        font-size: 0.75rem;
+        display: inline-block;
+        padding: -0.5rem;
+        position: relative;
+        top: -0.3rem;
+        left: 0.3rem;
+      }
+      .price-amount {
+        font-weight: 700;
+        font-size: 1.5rem;
+        display: inline-block;
+        padding: 0.5rem;
+        position: relative;
+        top: 0.15rem;
+      }
+
+    }
+
+    .available-colors {
+      padding: 0.5rem;
+      width: 25%;
+    }
+
+  }
+
+  .label {
+    color: white;
+    &.new-arrival {
+      background-color: $color-new;
+
+    }
+
+    &.sale {
+      background-color: $color-sale;
+    }
+
+    &.clearance {
+      background-color: $color-clearance;
+    }
+  }
+}
