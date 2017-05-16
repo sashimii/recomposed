@@ -1,70 +1,40 @@
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-import axios from 'axios';
+import React from 'react';
+import { compose, withState, withHandlers } from 'recompose';
 
 import './App.scss';
-import ProductList from './ProductList.react';
 
-export default class App extends Component {
+import Navigation from './Navigation.react';
+import Article from './Article.react';
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      results: false,
-      loadLimit: 20,
-    }
-  }
+const { Component } = React;
 
-  componentDidMount() {
-    axios.get(this.props.feedUrl)
-      .then((response) => {
-        this.originalData = response.data;
-        this.setState({results: this.originalData.results});
-      });
-  }
+const menuItems = ['About Us', 'Hello world'];
 
-  _updateLoadLimit(event) {
-    if(!!this.state.results && (this.state.loadLimit < this.state.results.length)) {
-      this.setState({loadLimit: this.state.loadLimit + 20 })
-    }
-  }
+const rawMarkdown = `
+## Hello World!
 
-  _sort(key) {
-    let outputArray = this.state.results;
-    outputArray.sort((a, b) => {
-      return (a[key] < b[key]) ? -1 : (a[key] > b[key] ? 1 : 0);
-    });
-    this.setState({results: outputArray});
-  }
+Welcome to my blog
 
-  _sortAlphabetically() {
-    this._sort('productName');
-  }
+Ain't it wonderful?
 
-  _sortByLowestPrice() {
-    this._sort('productPrice');
-  }
+Check out this [link](https://www.thestar.com)
+`;
 
-  render() {
-    if(!this.state.results) {
-      return (<span>Loading</span>);
-    }
-    return (
-      <div className="app-main row">
-        <div className="title small-12">
-          <h1 className="text-center">Our Products</h1>
-          <p className="text-center">
-            <span>Sort by: </span>
-            <a onClick={this._sortByLowestPrice.bind(this)}>Lowest Price</a> | <a onClick={this._sortAlphabetically.bind(this)}> Alphabetically</a>
-          </p>
-        </div>
-        <ProductList results={this.state.results} loadLimit={this.state.loadLimit} />
-        <button onClick={this._updateLoadLimit.bind(this)} className="button expanded" disabled={this.state.loadLimit > this.state.results.length}>Load More</button>
-      </div>
-    )
-  }
-}
+const App = () =>
+  <div>
+    <Navigation items={menuItems} />
+    <Article
+      title="Hello World!"
+      hero="https://garretttonge.files.wordpress.com/2012/08/img_0473.jpg"
+      content={
+        {
+          type: 'md',
+          raw: rawMarkdown
+        }
+      }
+    />
+  </div>;
 
-App.propTypes = {
-  feedUrl: PropTypes.string.isRequired
-};
+
+
+export default App;
