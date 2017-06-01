@@ -3,6 +3,33 @@
   <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="https://fonts.googleapis.com/css?family=Domine:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,600,600i,700,700i" rel="stylesheet">
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js">
+ 	</script>
+  <script>
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+  </script>
+  <script>
+    googletag.cmd.push(function() {
+      googletag.pubads().set("adsense_background_color", "FFFFFF");
+    });
+  </script>
+  <script>
+    googletag.cmd.push(function() {
+      googletag.defineSlot("/1234/travel/asia", [728, 90], "div-gpt-ad-123456789-0")
+        .addService(googletag.pubads())
+        .setTargeting("interests", ["sports", "music", "movies"]);
+      googletag.defineSlot("/1234/travel/asia", [[468, 60], [728, 90], [300, 250]], "div-gpt-ad-123456789-1")
+        .addService(googletag.pubads())
+        .setTargeting("gender", "male")
+        .setTargeting("age", "20-30");
+      googletag.pubads().setTargeting("topic","basketball");
+      googletag.pubads().enableSingleRequest();
+      googletag.enableServices();
+    });
+  </script>
     <title>Joe Fresh | New Products</title>
   </head>
   <body>

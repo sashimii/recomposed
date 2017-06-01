@@ -1,26 +1,24 @@
 @import '../../node_modules/foundation-sites/scss/foundation';
 @include foundation-everything($flex: true);
 
+@import '../config';
+
 $primary-orange: #fa4616;
 
-.app-main {
-  .title {
-    padding: 5rem 0;
+body {
+  background: $bg-color;
+}
 
-    h1 {
-      font-weight: 700;
-      color: $primary-orange;
-      text-transform: uppercase;
-      font-size: 3rem;
-    }
-    p {
-      font-weight: 200;
-      color: #8c8c8c;
-      text-transform: uppercase;
-      font-size: 1rem;
-    }
+.app-main {
+  p, h1, h2, h3, h4, h5 {
+    font-family: 'Nunito', sans-serif;
+    padding: 1rem;
   }
-  
+  .heading {
+    padding: 1rem 0;
+    font-family: 'Domine', serif;
+  }
+
   .button {
     background-color: white;
     border-color: $primary-orange;
