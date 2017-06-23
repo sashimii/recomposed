@@ -1,16 +1,13 @@
 import React from 'react';
 import { compose, withState, withHandlers } from 'recompose';
 
+import './Navigation.scss';
+
 const NavItem = ({ item }) => <li><a href="#">{ item }</a></li>;
 
 const Navigation = ({ items }) =>
-  <ul className="menu">
-    {
-      items.map(
-        (item) =>
-          <NavItem item={item}/>
-      )
-    }
-  </ul>;
+  <div>
+    <p className="site-title">Sixurb</p>
+  </div>;
 
 export default Navigation;

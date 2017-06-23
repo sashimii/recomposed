@@ -7,13 +7,14 @@ $primary-orange: #fa4616;
 
 body {
   background: $bg-color;
+  p, h1, h2, h3, h4, h5 {
+    font-family: 'Roboto', sans-serif;
+    color: #484848;
+  }
 }
 
 .app-main {
-  p, h1, h2, h3, h4, h5 {
-    font-family: 'Nunito', sans-serif;
-    padding: 1rem;
-  }
+
   .heading {
     padding: 1rem 0;
     font-family: 'Domine', serif;

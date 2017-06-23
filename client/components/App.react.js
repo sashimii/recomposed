@@ -5,6 +5,7 @@ import './App.scss';
 
 import Navigation from './Navigation.react';
 import Article from './Article.react';
+import ContentContainer from './ContentContainer.react';
 
 const { Component } = React;
 
@@ -32,20 +33,18 @@ Check out this [link](https://www.thestar.com)
 const App = () =>
   <div className="app-main">
     <Navigation items={menuItems} />
-    <div className="row align-center">
-      <div className="small-12 medium-10 columns">
-        <Article
-          title="Hello World!"
-          hero="https://garretttonge.files.wordpress.com/2012/08/img_0473.jpg"
-          content={
-            {
-              type: 'md',
-              raw: rawMarkdown
-            }
+    <ContentContainer>
+      <Article
+        title="Lorem Ipsum Dolor Sit"
+        hero="http://www.thinkstockphotos.ca/ts-resources/images/home/TS_AnonHP_462882495_01.jpg"
+        content={
+          {
+            type: 'md',
+            raw: rawMarkdown
           }
-        />
-      </div>
-    </div>
+        }
+      />
+    </ContentContainer>
   </div>;
 
 

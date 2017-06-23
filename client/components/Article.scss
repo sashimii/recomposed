@@ -5,7 +5,52 @@
 .article-content {
 
   background: white;
-  padding: 2rem;
-  margin: 2rem 0;
+  float: left;
+  padding-top: 4rem;
 
+  p {
+    padding: 0.5rem;
+    font-size: 1.15rem;
+    text-rendering: optimizeLegibility;
+  }
+
+}
+
+.hero-image-container {
+
+  height: auto;
+  overflow: hidden;
+}
+
+.hero-image {
+  text-align: center;
+  height: auto;
+  width: auto;
+  display: block;
+  max-width:100%;
+  max-height:auto;
+  object-fit: cover;
+}
+
+
+.article-headline {
+  color: white;
+  float: left;
+  width: 95%;
+  display: block;
+  position: relative;
+  left: 1rem;
+  top: -5rem;
+  margin-bottom: -10rem;
+
+  h1 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: white;
+    padding: 0.1rem 0.25rem;
+    background: black;
+    display: inline;
+  }
 }

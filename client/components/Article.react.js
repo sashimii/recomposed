@@ -8,15 +8,24 @@ import './Article.scss';
 
 const Article = ({ title, hero, content }) =>
   <article>
-    <h1 className="heading">{ title }</h1>
     {
-      hero && <img src={hero} />
+      hero &&
+      <div className="hero-image-container">
+        <img className="hero-image" src={hero} />
+      </div>
     }
-    <Advertisement />
-    <div className="article-content">
-      <Content {...content} />
+    <Heading>{ title }</Heading>
+    <div className="article-content align-center">
+      <div className="large-6 columns">
+        <Content {...content} />
+      </div>
     </div>
   </article>;
+
+const Heading = ({ children }) =>
+  <div className="article-headline">
+    <h1>{ children }</h1>
+  </div>;
 
 
 const Content = ({type, raw}) =>
